@@ -14,23 +14,32 @@ public class calcular {
 		faltan= media1S+nac;
 		JOptionPane.showMessageDialog(null, "nota sem PS e AM: " + faltan );
 	
-		am = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota do projeto AM:"));
-		am = am * 0.3;
+//		am = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota do projeto AM:"));
+		am = 2.22;
 		//JOptionPane.showMessageDialog(null, "Projeto AM: " + am);
 		
-		ps = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota da PS:"));
-		ps = ps / 2;
-		//JOptionPane.showMessageDialog(null, "nota PS: " + ps);
+		faltan= media1S+nac+am;
+		JOptionPane.showMessageDialog(null, "nota sem PS: " + faltan );
 		
-		media = am + ps + nac;
-		JOptionPane.showMessageDialog(null, "media final: " + media );
+//		ps = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota da PS:"));
+//		ps = ps / 2;
+//		//JOptionPane.showMessageDialog(null, "nota PS: " + ps);
+//		media = am + ps + nac;
+//		JOptionPane.showMessageDialog(null, "media final: " + media );
+//		mediafinal = media + media1S;
+//		if (mediafinal <12) {
+//			JOptionPane.showMessageDialog(null, "REPROVADO: " + mediafinal );
+//		}else 
+//			JOptionPane.showMessageDialog(null, "APROVADO: " + mediafinal );
 		
-		
-		mediafinal = media + media1S;
-		if (mediafinal <12) {
-			JOptionPane.showMessageDialog(null, "REPROVADO: " + mediafinal );
+		if (faltan <12) {
+			JOptionPane.showMessageDialog(null, "REPROVADO: " + faltan );
 		}else 
-			JOptionPane.showMessageDialog(null, "APROVADO: " + mediafinal );
+			JOptionPane.showMessageDialog(null, "APROVADO: " + faltan );
+		
+		double md = 12;
+		md-=faltan;
+		JOptionPane.showMessageDialog(null, "precisa na PS: " + md*2 );
 	}
 
 }
